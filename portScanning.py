@@ -1,6 +1,8 @@
 # do port scanning on localhost
+# do not port scan other physical network as your please.
 
 import socket
+
 
 def scan_ports(host, start_port, end_port):
     open_ports = []
@@ -14,5 +16,6 @@ def scan_ports(host, start_port, end_port):
             print(f'Port {port} is open')
         sock.close()
     return open_ports
+
 
 scan_ports('127.0.0.1', 1, 65535)
